@@ -7,8 +7,8 @@
 
 int main(int argc, char* argv[]) {
 
-    if(argc < 5) {
-        cout << "usage: " << argv[0] << " <device> <width> <height> <delay>" << endl;
+    if(argc < 7) {
+        cout << "usage: " << argv[0] << " <device> <width> <height> <delay> <serial> <flip>" << endl;
         exit(-1);
     }
 

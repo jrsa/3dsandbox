@@ -28,6 +28,9 @@ public:
     vector<string> arguments;
 
 private:
+    ofSerial ser;
+    uint8_t serial_isright;
+    bool flip;
 
     ofVideoGrabber webcam;
     ofTexture current_frame;
