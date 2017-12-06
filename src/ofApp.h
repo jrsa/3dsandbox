@@ -4,7 +4,7 @@
 
 #include "ofMain.h"
 
-#define FRAME_DELAY_LENGTH 30
+#define MAX_FRAME_DELAY_LENGTH 60
 
 class ofApp : public ofBaseApp {
 
@@ -25,12 +25,18 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
 
+    vector<string> arguments;
+
 private:
+
     ofVideoGrabber webcam;
     ofTexture current_frame;
     
     ofShader anaglyph;
+
+    int out_w, out_h;
     
-    int write_head;
-    ofTexture delay[FRAME_DELAY_LENGTH];
+    int write_head = 0;
+    int opt_delay_amount;
+    ofTexture delay[MAX_FRAME_DELAY_LENGTH];
 };
